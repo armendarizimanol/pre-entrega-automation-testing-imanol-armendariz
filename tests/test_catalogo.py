@@ -1,18 +1,12 @@
+
 from selenium.webdriver.common.by import By
 
-from pages.LoginPage import LoginPage
+from utils.helpers import iniciar_sesion
 
 
 def test_catalogo(driver):
 
-    login = LoginPage(driver)
-
-    driver.get("https://www.saucedemo.com/")
-
-    login.hacer_login(
-        "standard_user",
-        "secret_sauce"
-    )
+    iniciar_sesion(driver)
 
     assert driver.title == "Swag Labs"
 

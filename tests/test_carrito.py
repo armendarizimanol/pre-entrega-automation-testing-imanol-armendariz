@@ -1,20 +1,14 @@
+
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
-from pages.LoginPage import LoginPage
+from utils.helpers import iniciar_sesion
 
 
 def test_agregar_producto(driver):
 
-    login = LoginPage(driver)
-
-    driver.get("https://www.saucedemo.com/")
-
-    login.hacer_login(
-        "standard_user",
-        "secret_sauce"
-    )
+    iniciar_sesion(driver)
 
     inventory_items = driver.find_elements(
         By.CLASS_NAME, "inventory_item"
@@ -48,14 +42,7 @@ def test_agregar_producto(driver):
 
 def test_contador_carrito(driver):
 
-    login = LoginPage(driver)
-
-    driver.get("https://www.saucedemo.com/")
-
-    login.hacer_login(
-        "standard_user",
-        "secret_sauce"
-    )
+    iniciar_sesion(driver)
 
     inventory_items = driver.find_elements(
         By.CLASS_NAME, "inventory_item"
@@ -80,14 +67,7 @@ def test_contador_carrito(driver):
 
 def test_navegar_carrito_y_verificar_producto(driver):
 
-    login = LoginPage(driver)
-
-    driver.get("https://www.saucedemo.com/")
-
-    login.hacer_login(
-        "standard_user",
-        "secret_sauce"
-    )
+    iniciar_sesion(driver)
 
     inventory_items = driver.find_elements(
         By.CLASS_NAME, "inventory_item"
