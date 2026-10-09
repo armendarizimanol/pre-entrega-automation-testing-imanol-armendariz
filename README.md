@@ -16,21 +16,16 @@ La idea es realizar pruebas automatizadas sobre la página SauceDemo utilizando 
 
 ```text
 pre_entrega_QA_automation/
-│
 ├── pages/
 │   └── LoginPage.py
-│
 ├── tests/
 │   ├── test_login.py
 │   ├── test_catalogo.py
 │   └── test_carrito.py
-│
 ├── utils/
 │   └── helpers.py
-│
 ├── reports/
 │   └── reporte.html
-│
 ├── conftest.py
 ├── pytest.ini
 ├── README.md
@@ -39,7 +34,7 @@ pre_entrega_QA_automation/
 
 - **pages:** contiene la clase `LoginPage`, donde se encuentran los elementos y acciones relacionados con el inicio de sesión.
 - **tests:** contiene las pruebas automatizadas de login, catálogo y carrito.
-- **utils:** contiene funciones auxiliares que se utilizan en las pruebas, como el inicio de sesión.
+- **utils:** contiene funciones auxiliares utilizadas en las pruebas, como el inicio de sesión.
 - **reports:** guarda el reporte HTML generado por Pytest.
 - **conftest.py:** configura el navegador que utilizan las pruebas.
 - **pytest.ini:** contiene la configuración de Pytest para generar el reporte.
@@ -90,9 +85,7 @@ python -m pytest
 
 Al ejecutar las pruebas, se genera automáticamente un reporte HTML en:
 
-```text
-reports/reporte.html
-```
+`reports/reporte.html`
 
 El reporte permite consultar los resultados de las pruebas ejecutadas.
 
@@ -106,6 +99,4 @@ Además, se utiliza `utils/helpers.py` para reutilizar la función de inicio de 
 
 En la última ejecución, las cinco pruebas finalizaron correctamente:
 
-```text
-5 passed in 16.41s
-```
+`5 passed in 16.41s`
